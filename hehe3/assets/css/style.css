@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #4A3F3F;
+    background-color: #FFF5F9;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.hero-section {
+    background: linear-gradient(135deg, #FFE6F2 0%, #FFF0F5 30%, #FFE4EC 70%, #FFE6F2 100%);
+    padding: 120px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: -80px;
+    left: -80px;
+    width: 280px;
+    height: 280px;
+    background-image: url('https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=cute%20pink%20flower%20illustration%20watercolor%20style&image_size=square_hd');
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.35;
+    transform: rotate(-20deg);
+}
+
+.hero-section::after {
+    content: '';
+    position: absolute;
+    bottom: -80px;
+    right: -80px;
+    width: 320px;
+    height: 320px;
+    background-image: url('https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=cute%20pink%20flower%20illustration%20watercolor%20style&image_size=square_hd');
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+    transform: rotate(25deg);
+}
+
+.hero-flower-1 {
+    position: absolute;
+    top: 10%;
+    right: 15%;
+    font-size: 48px;
+    opacity: 0.6;
+    animation: float 6s ease-in-out infinite;
+}
+
+.hero-flower-2 {
+    position: absolute;
+    bottom: 20%;
+    left: 10%;
+    font-size: 56px;
+    opacity: 0.5;
+    animation: float 7s ease-in-out infinite reverse;
+}
+
+.hero-sparkle {
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    font-size: 32px;
+    opacity: 0.7;
+    animation: sparkle 2s ease-in-out infinite;
+}
+
+.hero-sparkle-2 {
+    position: absolute;
+    top: 60%;
+    right: 25%;
+    font-size: 36px;
+    opacity: 0.6;
+    animation: sparkle 2.5s ease-in-out infinite 0.5s;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(10deg); }
+}
+
+@keyframes sparkle {
+    0%, 100% { opacity: 0.7; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.2); }
+}
+
+.hero-section h1 {
+    text-shadow: 2px 2px 4px rgba(255, 182, 193, 0.3);
+}
+
+.product-card {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(230, 184, 200, 0.3);
+    transition: all 0.4s ease;
+    border: 2px solid #FFE6F2;
+    position: relative;
+}
+
+.product-card::before {
+    content: '🌸';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    opacity: 0.7;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(230, 184, 200, 0.4);
+    border-color: #E6B8C8;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #FFB6C1 0%, #FF69B4 100%);
+    border-color: #FFB6C1;
+    color: white;
+    border-radius: 50px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(255, 182, 193, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #FF69B4 0%, #FFB6C1 100%);
+    border-color: #FF69B4;
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(255, 105, 180, 0.5);
+}
+
+.featured-collection {
+    padding: 80px 0;
+    position: relative;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+    color: #D65B88;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.section-title::before,
+.section-title::after {
+    content: '✿';
+    margin: 0 15px;
+    font-size: 28px;
+    color: #FFB6C1;
+}
+
+.navbar {
+    background: linear-gradient(90deg, #FFE6F2 0%, #FFF0F5 100%);
+    box-shadow: 0 2px 15px rgba(230, 184, 200, 0.3);
+}
+
+.navbar-brand {
+    color: #D65B88 !important;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    color: #8B5A7E !important;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #FF69B4 !important;
+}
+
+.card {
+    border-radius: 20px;
+    border: 2px solid #FFE6F2;
+    box-shadow: 0 4px 20px rgba(230, 184, 200, 0.2);
+}
+
+footer {
+    background: linear-gradient(135deg, #FFE6F2 0%, #FFF0F5 100%);
+    color: #8B5A7E;
+}
+
+.shop-section {
+    background-color: #FFF5F9;
+    padding: 80px 0;
+}
+
+.shop-title {
+    text-align: center;
+    color: #D65B88;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.shop-title::before,
+.shop-title::after {
+    content: '💎';
+    margin: 0 15px;
+    font-size: 28px;
+}
+
+.collections-section {
+    background-color: #FFF5F9;
+    padding: 80px 0;
+}
+
+.collections-title {
+    text-align: center;
+    color: #D65B88;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.collections-title::before,
+.collections-title::after {
+    content: '🌸';
+    margin: 0 15px;
+    font-size: 28px;
+}
+
+.collection-card {
+    background: linear-gradient(135deg, #FFE6F2 0%, #FFF0F5 100%);
+    border-radius: 25px;
+    border: 3px solid #FFB6C1;
+    box-shadow: 0 8px 25px rgba(255, 182, 193, 0.3);
+    transition: all 0.3s ease;
+}
+
+.collection-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 35px rgba(255, 182, 193, 0.4);
+}
+
+.collection-card img {
+    border: 4px solid #FFB6C1;
+    box-shadow: 0 4px 15px rgba(255, 182, 193, 0.3);
+}
